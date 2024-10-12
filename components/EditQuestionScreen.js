@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+  import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import axios from 'axios';
 
@@ -8,7 +8,7 @@ const EditQuestionScreen = ({ route }) => {
   const [questionText, setQuestionText] = useState(question.question); // Pre-fill the question
   const [successMessage, setSuccessMessage] = useState(''); // State to manage success message
   const [errorMessage, setErrorMessage] = useState(''); // State to manage error message
-
+ const [catgory_id, setCatgory_id] = useState(question.category_id); // Pre-fill the question
   const handleSave = async () => {
     try {
       // Send the updated question data to the backend via POST request
@@ -16,6 +16,7 @@ const EditQuestionScreen = ({ route }) => {
         id: question.id,
         category:category,
         question: questionText,
+		        category_id: catgory_id,  // Send category_id along with the request
 		action:'editquestion',
       });
 

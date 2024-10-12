@@ -5,29 +5,46 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "scheme": "myapp",
+    "assets": [
+      "./assets/fonts"
+    ],
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/Splashscreen.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.praveenxr.greencard1"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.praveenxr.greencard2"
+      "package": "com.praveenxr.greencard1"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
     },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
     "extra": {
       "eas": {
         "projectId": "86c9bfc3-f13b-4d99-8515-fac21dfb6944"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/86c9bfc3-f13b-4d99-8515-fac21dfb6944"
     }
   }
 }

@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-	 buttonContainer: {
+  buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
     position: 'absolute',
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     right: 10,
     zIndex: 1,
   },
-	listItemContainer: {
+  listItemContainer: {
     backgroundColor: '#f9f9f9',
     padding: 15,
     marginVertical: 8,
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
- listLconEdit:{
-	 paddingRight:10
- },
+  listLconEdit: {
+    paddingRight: 10,
+  },
   listcategory: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -36,13 +36,18 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   questionTextList: {
-    fontSize: 18,
+    fontSize: 20,
     color: '#333',
     lineHeight: 22,
-	align:'left'
+    textAlign: 'left',
   },
-  
-  
+  questionText: {
+    fontSize: 20,
+    color: '#333',
+    lineHeight: 30,
+    justifyContent: 'center',
+    textAlign: 'center',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -56,27 +61,25 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: '#90EE90',
-    borderWidth: 5,
-    margin: 30,
-    marginBottom: 50,
-    paddingTop: 100,
-    paddingBottom: 100,
-	
-	backgroundColor: '#e6fff2',
+   height:'100%',
+    
+    backgroundColor: '#e6fff2',
     borderRadius: 10,
-    padding: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
     elevation: 5,
-    marginVertical: 20,
-	
-	
-	
+    
+  },
+  scrollContainer: {
+    flex: 1,
+    maxHeight: 300, // Adjust this based on your design
+    position: 'relative', // Needed for overlaying the scroll indicator
+  },
+  scrollView: {
+    flex: 1,
   },
   category: {
     fontSize: 22,
@@ -84,11 +87,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
   },
-  questionText: {
+  listQuestionText: {
     fontSize: 18,
     color: '#333',
-    textAlign: 'center',
-    marginHorizontal: 20,
+    textAlign: 'left',
   },
   dotStyle: {
     backgroundColor: 'rgba(0,0,0,.2)',
@@ -115,11 +117,6 @@ const styles = StyleSheet.create({
     left: 110,
     right: 100,
   },
-  
-  
-  
-  
-  
   header: {
     height: 60,
     backgroundColor: 'white',
@@ -129,38 +126,87 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-    marginTop: 30,
+   
   },
   centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
- addButton: {
-  backgroundColor: '#1dbf73',
-  padding: 15, // Reduced padding for a smaller button
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: 30, // Circular shape
-  position: 'absolute', // Positioning it to the bottom-right corner
-  bottom: 20,
-  right: 20,
-  elevation: 5, // Shadow for Android
-  shadowColor: '#000', // Shadow for iOS
-  shadowOffset: { width: 0, height: 2 },
-  shadowOpacity: 0.3,
-  shadowRadius: 2,
-},
-addButtonText: {
-  color: '#fff',
-  fontSize: 16, // Slightly smaller text
-  fontWeight: 'bold',
-  marginLeft: 5, // Spacing between icon and text
-},
+  addButton: {
+    backgroundColor: '#1dbf73',
+    padding: 15, // Reduced padding for a smaller button
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 30, // Circular shape
+    position: 'absolute', // Positioning it to the bottom-right corner
+    bottom: 20,
+    right: 20,
+    elevation: 5, // Shadow for Android
+    shadowColor: '#000', // Shadow for iOS
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+  },
+  addButtonText: {
+    color: '#fff',
+    fontSize: 16, // Slightly smaller text
+    fontWeight: 'bold',
+    marginLeft: 5, // Spacing between icon and text
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    padding: 10,
+    backgroundColor: '#f5f5f5',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+  searchBox: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    height: 40,
+  },
+  searchButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 10,
+    backgroundColor: '#1dbf73',
+    padding: 10,
+    borderRadius: 5,
+  },
+  emptyText: {
+    textAlign: 'center',
+    padding: 50,
+    fontSize: 16, // Slightly smaller text
+    fontWeight: 'bold',
+  },
+   scrollIndicator: {
+    position: 'absolute',
+    bottom: -55,
+   
+    alignItems: 'center',
+	left:80,
+  },
   
-  // Other styles...
-
+  scrollText: {
+    fontSize: 14,
+    color: '#888',
+    marginTop: 4,
+  },
+  paginationContainer: {
+  alignItems: 'center',
+  marginVertical: 60,
+  position:'absolute',
+  bottom:0,
+  left:'46%',
+},
+paginationText: {
+  fontSize: 16,
+  color: '#000',
+},
 
 });
 
